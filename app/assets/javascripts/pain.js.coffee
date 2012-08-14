@@ -9,4 +9,3 @@ window.Pain =
 
 $(document).ready ->
   Pain.init()
-                                           gi
