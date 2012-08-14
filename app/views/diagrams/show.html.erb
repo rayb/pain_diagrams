@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>File:</b>
+  <%= @diagram.file %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @diagram.subject_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_diagram_path(@diagram) %> |
+<%= link_to 'Back', diagrams_path %>
