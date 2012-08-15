@@ -4,4 +4,11 @@ class Pain.Routers.Diagrams extends Backbone.Router
     '' : 'index'
 
   initialize: ->
-    alert 'init'
+    @diagrams = new Pain.Collections.Diagrams()
+    @diagrams.reset($('#container').data('diagrams'))
+
+  index: ->
+    view = new Pain.Views.DiagramsIndex(
+      collection: @diagrams,
+    )
+    $('#container').html(view.render().el)
